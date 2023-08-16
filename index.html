@@ -1,0 +1,115 @@
+<DOCTYPE html>
+<html>
+<head>
+<title>Card Task</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+<style>
+#cards_list{
+display:flex;
+justify-content:space-evenly;
+text-align:center;
+}
+.sec{
+width:30%;
+box-shadow:0 0 10px 2px;
+}
+
+</style>
+</head>
+<body>
+<div>
+
+</div>
+<div id="cards_list">
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+var cards = [
+{
+icon:"fa fa-trophy",
+title:"Best Career option",
+content:"2022 witnessed a 21% jump in professionals. Earn an average of INR 4 LPA.",
+},
+{
+icon:"fa fa-briefcase",
+title:"Placement Assured Programsn",
+content:"We offer Placement Assured Programs after project completion and if students reach industry expected skills.",
+},
+{
+icon:"fa fa-line-chart",
+title:"Gets You Interview Ready",
+content:"Customized career mentoring session. Profile enhancement, mock interviews and regular feedback.",
+}
+]
+
+function createElement(card){
+
+<!-- element create -->
+var cardIcon = document.createElement("i"),
+	cardTitle = document.createElement("h3"),
+	cardContent = document.createElement("p"),
+	cardSec = document.createElement("div");
+	
+	
+	
+	<!-- cardIcon.innerHTML = cards.icon, -->
+	cardTitle.innerHTML = card.title,
+	cardContent.innerHTML = card.content;
+	console.log(cardIcon,cardTitle,cardContent);
+	
+	cardIcon.setAttribute("class",card.icon);
+	cardSec.setAttribute("class","sec");
+	
+	
+	cardSec.appendChild(cardIcon);
+	cardSec.appendChild(cardTitle);
+	cardSec.appendChild(cardContent);
+	console.log(cardSec);
+	
+var boxList = document.getElementById("cards_list");
+boxList.appendChild(cardSec);
+
+}
+
+
+
+	for(let i=0;i<cards.length;i++){
+	createElement(cards[i]);
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+</body>
+
+
+
+</html>
